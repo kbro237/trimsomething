@@ -8,9 +8,11 @@ If you live in the probably small intersection on the Venn Diagram of people who
 
 The script requires:
 
-1. A directory with at least one 640 * 960 pixel jpg output from the Draw Something app on iOS -- specifically, but possibly not necessarily, the one you get when you tap the *Save* button after drawing. (I have no idea if this applies to the Android app.)
+1. A directory with at least one 640 * 960 pixel jpg or png output from the Draw Something app on iOS -- specifically, but possibly not necessarily, the one you get when you tap the *Save* button after drawing. (I have no idea if this applies to the Android app.)
 2. [ImageMagick's](http://www.imagemagick.org) convert utility
 
 It will:
 
-- take each jpg file and **create a new one** at 640 * 664 pixels with the text "trimmed_" prepended to the file name
+- take each jpg or png file and **create a new one** at 640 * 664 pixels with the text "trimmed_" prepended to the file name
+- not trim files that have "trimmed_" prepended to the file name
+

@@ -4,5 +4,20 @@
 
 for i in *.jpg
 do
-    convert $i -crop 640x664+0+178 +repage trimmed_$i
+    if [[ `echo "$i"` != trimmed_* ]]; then
+        convert "$i" -crop 640x664+0+178 +repage "trimmed_$i"
+        echo "$i copied and trimmed."
+    else
+        echo "$i left unchanged."
+    fi
+done
+
+for i in *.png
+do
+    if [[ `echo "$i"` != trimmed_* ]]; then
+        convert "$i" -crop 640x664+0+178 +repage "trimmed_$i"
+        echo "$i copied and trimmed."
+    else
+        echo "$i left unchanged."
+    fi
 done
